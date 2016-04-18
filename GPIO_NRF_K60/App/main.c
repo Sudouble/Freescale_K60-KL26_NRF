@@ -235,8 +235,8 @@ void main()
         //CCD图像（不好用！！！）
         //SendPack_CCD(2, 1, (uint8_t *)&CCD_BUFF[0], TSL1401_SIZE, 1, 1);
         //****************************************
-        //电感参数
-        //SendPack_Short(Electricity,Electricity_1, /*你的电感变量名*/ 0, 1, 0);
+        //实时参数
+        //SendPack_Short(Electricity,Electricity_1, /*你的变量名*/ 0, 1, 0);
         //****************************************
         //实时参数
         SendPack_Short(RealTime,RealTime_1, (int)1, 1, 0);
