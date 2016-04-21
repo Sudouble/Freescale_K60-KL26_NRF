@@ -1946,7 +1946,7 @@
       <name>$PROJ_DIR$\..\..\Board\Src\FIRE_UI_VAR.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Board\Src\NRF_DIY.c</name>
+      <name>$PROJ_DIR$\..\..\Board\Src\NRF_SmartCar.c</name>
     </file>
   </group>
   <group>

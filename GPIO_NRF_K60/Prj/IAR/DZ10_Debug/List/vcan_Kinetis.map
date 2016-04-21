@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR ELF Linker V6.70.1.5641/W32 for ARM               18/Apr/2016  15:20:46 #
+# IAR ELF Linker V6.70.1.5641/W32 for ARM               21/Apr/2016  15:19:32 #
 # Copyright 2007-2013 IAR Systems AB.                                         #
 #                                                                             #
 #    Output file  =  F:\Project_Compotition\6.MyFreescal_10th\New_for_platfor #
@@ -50,7 +50,7 @@
 #                    m\Freescale_K60-KL26_NRF\GPIO_NRF_K60\Prj\IAR\DZ10_Debug #
 #                    \Obj\MK60_wdog.o F:\Project_Compotition\6.MyFreescal_10t #
 #                    h\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_K60\P #
-#                    rj\IAR\DZ10_Debug\Obj\NRF_DIY.o                          #
+#                    rj\IAR\DZ10_Debug\Obj\NRF_SmartCar.o                     #
 #                    F:\Project_Compotition\6.MyFreescal_10th\New_for_platfor #
 #                    m\Freescale_K60-KL26_NRF\GPIO_NRF_K60\Prj\IAR\DZ10_Debug #
 #                    \Obj\startup_MK60DZ10.o F:\Project_Compotition\6.MyFrees #
@@ -159,7 +159,7 @@ __SystemLibrary = DLib
   .text                ro code  0x0000356c   0x3dc  MK60_mcg.o [1]
   .text                ro code  0x00003948   0x1fc  main.o [1]
   .text                ro code  0x00003b44    0xf4  MK60_ftm.o [1]
-  .text                ro code  0x00003c38   0x150  NRF_DIY.o [1]
+  .text                ro code  0x00003c38   0x150  NRF_SmartCar.o [1]
   .text                ro code  0x00003d88    0xd8  FltMul.o [4]
   .text                ro code  0x00003e60    0x44  FltToS32.o [4]
   .text                ro code  0x00003ea4    0x34  sprintf.o [3]
@@ -178,7 +178,7 @@ __SystemLibrary = DLib
   .rodata              const    0x00004478    0x40  MK60_spi.o [1]
   .rodata              const    0x000044b8    0x3c  MK60_conf.o [1]
   .rodata              const    0x000044f4    0x30  main.o [1]
-  .rodata              const    0x00004524    0x30  NRF_DIY.o [1]
+  .rodata              const    0x00004524    0x30  NRF_SmartCar.o [1]
   .rodata              const    0x00004554    0x28  main.o [1]
   .text                ro code  0x0000457c    0x28  data_init.o [5]
   .rodata              const    0x000045a4    0x24  MK60_conf.o [1]
@@ -196,7 +196,7 @@ __SystemLibrary = DLib
   .rodata              const    0x00004688     0xc  VCAN_NRF24L0.o [1]
   .rodata              const    0x00004694     0xc  VCAN_NRF24L0.o [1]
   .text                ro code  0x000046a0     0xc  cstartup_M.o [5]
-  .rodata              const    0x000046ac     0x8  NRF_DIY.o [1]
+  .rodata              const    0x000046ac     0x8  NRF_SmartCar.o [1]
   .rodata              const    0x000046b4     0x8  VCAN_NRF24L0.o [1]
   .rodata              const    0x000046bc     0x4  MK60_spi.o [1]
   Initializer bytes    ro data  0x000046c0    0x88  <for P2 s0>
@@ -278,7 +278,7 @@ F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF
     MK60_spi.o               1 656               164       12
     MK60_uart.o                588               108       24
     MK60_wdog.o                 64
-    NRF_DIY.o                  336                56
+    NRF_SmartCar.o             336                56
     VCAN_LED.o                 112                 4        4
     VCAN_NRF24L0.o           1 356                76    2 589
     VCAN_key.o                 156                 8        8
@@ -382,7 +382,7 @@ Region$$Table$$Base     0x000045c8          --   Gb  - Linker created -
 Region$$Table$$Limit    0x000045d8          --   Gb  - Linker created -
 Reset_Handler           0x00000411         Code  Gb  startup_MK60DZ10.o [1]
 SPIN                    0x1fff0b94    0xc  Data  Gb  MK60_spi.o [1]
-SendPack_Short          0x00003c39  0x140  Code  Gb  NRF_DIY.o [1]
+SendPack_Short          0x00003c39  0x140  Code  Gb  NRF_SmartCar.o [1]
 TX_ADDRESS              0x1fff0bc4    0x8  Data  Gb  VCAN_NRF24L0.o [1]
 UARTN                   0x1fff0ba0   0x18  Data  Gb  MK60_uart.o [1]
 _GenldLargeNoMb         0x00000d8d  0x234  Code  Lc  xprintflarge_nomb.o [3]

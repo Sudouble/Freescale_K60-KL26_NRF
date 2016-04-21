@@ -1,42 +1,42 @@
-"F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\App\main.c"
+"F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\App\main.c"
 -std=c99
 -ferror-limit=100
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Prj\IAR\..\..\App
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Prj\IAR\..\..\App
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Prj\IAR\..\..\App\Inc
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Prj\IAR\..\..\App\Inc
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Prj\IAR\..\..\Board\Inc
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Prj\IAR\..\..\Board\Inc
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Prj\IAR\..\..\Chip\inc
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Prj\IAR\..\..\Chip\inc
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Prj\IAR\..\..\Chip\inc\IAR
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Prj\IAR\..\..\Chip\inc\IAR
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Prj\IAR\..\..\Chip\inc\kinetis
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Prj\IAR\..\..\Chip\inc\kinetis
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Prj\IAR\..\..\Lib\CMSIS\Inc
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Prj\IAR\..\..\Lib\CMSIS\Inc
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Prj\IAR\..\..\Lib\SD_CARD
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Prj\IAR\..\..\Lib\SD_CARD
 -I
-D:\Program Files (x86)\IAR Systems\Embedded Workbench 6.7\arm\inc
+D:\Program Files (x86)\IAR Systems\Embedded Workbench 6.5\arm\inc
 -I
-D:\Program Files (x86)\IAR Systems\Embedded Workbench 6.7\arm\inc\c
+D:\Program Files (x86)\IAR Systems\Embedded Workbench 6.5\arm\inc\c
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\App
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\App
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\App\Inc
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\App\Inc
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Board\Inc
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Board\Inc
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Chip\inc
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Chip\inc
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Chip\inc\IAR
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Chip\inc\IAR
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Chip\inc\kinetis
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Chip\inc\kinetis
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Lib\CMSIS\Inc
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Lib\CMSIS\Inc
 -I
-F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Lib\SD_CARD
+F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Lib\SD_CARD
 -DDEBUG=1
 -DMKL26Z4=1
 -DARM_MATH_CM0PLUS=1
@@ -231,8 +231,8 @@ F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Lib\SD_CARD
 -D__HAS_LOCATED_WITH_INIT__=1
 -D__IAR_COMPILERBASE__=593412
 -D__SIGNED_CHARS__=1
--D__DATE__="Jul  3 2015"
--D__TIME__="17:52:52"
+-D__DATE__="Apr 21 2016"
+-D__TIME__="15:15:08"
 -D__STDC__=1
 -D__STDC_VERSION__=199901L
 -D__STDC_HOSTED__=1
@@ -257,8 +257,8 @@ F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_LED_KL26\Lib\SD_CARD
 -D__EDG_SYSV=0
 -D__EDG_ANSIC=1
 -D__EDG_CPP0X_IL_EXTENSIONS_SUPPORTED=1
--D_DLIB_CONFIG_FILE_HEADER_NAME="D:\Program Files (x86)\IAR Systems\Embedded Workbench 6.7\arm\INC\c\DLib_Config_Full.h"
--D_DLIB_CONFIG_FILE_STRING="D:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 6.7\\arm\\INC\\c\\DLib_Config_Full.h"
+-D_DLIB_CONFIG_FILE_HEADER_NAME="D:\Program Files (x86)\IAR Systems\Embedded Workbench 6.5\arm\INC\c\DLib_Config_Full.h"
+-D_DLIB_CONFIG_FILE_STRING="D:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 6.5\\arm\\INC\\c\\DLib_Config_Full.h"
 -D__VERSION__="IAR ANSI C/C++ Compiler V6.70.1.5641/W32 for ARM"
 -D__CODE_MEMORY_LIST1__()=__CODE_MEM_HELPER1__(__code, 0 )
 -D__CODE_MEMORY_LIST2__(_P1)=__CODE_MEM_HELPER2__(__code, 0 ,  _P1 )

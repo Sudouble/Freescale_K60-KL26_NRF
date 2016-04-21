@@ -12,7 +12,7 @@
           
           
           
-        <Column0>239</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <Column0>213</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Build>
         
@@ -25,7 +25,7 @@
     <Windows>
       
       
-    <Wnd2>
+    <Wnd0>
         <Tabs>
           <Tab>
             <Identity>TabID-15906-29485</Identity>
@@ -37,7 +37,7 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
         <Tabs>
           <Tab>
             <Identity>TabID-14860-29505</Identity>
@@ -47,20 +47,20 @@
           </Tab>
         <Tab><Identity>TabID-1645-32209</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\App\Inc\include.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>747</SelStart2><SelEnd2>749</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\App\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>60</YPos2><SelStart2>2551</SelStart2><SelEnd2>2551</SelEnd2></Tab><ActiveTab>1</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\Inc\NRF_DIY.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>55</SelStart2><SelEnd2>55</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\Inc\FIRE_NRF24L0.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>512</SelStart2><SelEnd2>512</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Chip\Inc\common.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>198</YPos2><SelStart2>11052</SelStart2><SelEnd2>11052</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\Src\FIRE_NRF24L0.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>24</YPos2><SelStart2>1118</SelStart2><SelEnd2>1118</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\App\Inc\include.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>5</YPos2><SelStart2>1207</SelStart2><SelEnd2>1207</SelEnd2></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\App\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>464</SelStart2><SelEnd2>464</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\Inc\NRF_DIY.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>55</SelStart2><SelEnd2>55</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\Inc\FIRE_NRF24L0.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>512</SelStart2><SelEnd2>512</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Chip\Inc\common.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>198</YPos2><SelStart2>11052</SelStart2><SelEnd2>11052</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\Src\FIRE_NRF24L0.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>24</YPos2><SelStart2>1118</SelStart2><SelEnd2>1118</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-00e80840><key>iaridepm.enu1</key></Toolbar-00e80840></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes><Toolbar-12d789b0><key>debuggergui.enu1</key></Toolbar-12d789b0></Sizes></Row2><Row3><Sizes><Toolbar-12d78370><key>armjlink.enu1</key></Toolbar-12d78370></Sizes></Row3></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>566</Bottom><Right>330</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>233100</sizeHorzCX><sizeHorzCY>249377</sizeHorzCY><sizeVertCX>386946</sizeVertCX><sizeVertCY>708229</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>191</Bottom><Right>860</Right><x>-2</x><y>-2</y><xscreen>862</xscreen><yscreen>193</yscreen><sizeHorzCX>1004662</sizeHorzCX><sizeHorzCY>240648</sizeHorzCY><sizeVertCX>233100</sizeVertCX><sizeVertCY>249377</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-029ae338><key>iaridepm.enu1</key></Toolbar-029ae338></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>507</Bottom><Right>304</Right><x>-2</x><y>-2</y><xscreen>235</xscreen><yscreen>157</yscreen><sizeHorzCX>172035</sizeHorzCX><sizeHorzCY>228863</sizeHorzCY><sizeVertCX>224012</sizeVertCX><sizeVertCY>741983</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>134</Bottom><Right>1368</Right><x>-2</x><y>-2</y><xscreen>1370</xscreen><yscreen>136</yscreen><sizeHorzCX>1002928</sizeHorzCX><sizeHorzCY>198251</sizeHorzCY><sizeVertCX>172035</sizeVertCX><sizeVertCY>228863</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

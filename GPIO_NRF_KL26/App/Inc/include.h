@@ -34,7 +34,7 @@
 #include  "FIRE_key_event.h"    //按键消息处理
 #include  "FIRE_NRF24L0_MSG.h"  //无线模块消息处理
 
-#include  "NRF_DIY.h"
+#include  "NRF_SmartCar.h"
 
 
 

@@ -1,4 +1,4 @@
-#include "NRF_Debug.h"
+#include "NRF_SmartCar.h"
 
 //下面这个函数是预留的接口，只需要将你的数据按照格式放进来就可以了
 

@@ -5682,7 +5682,7 @@
   <group>
     <name>Board</name>
     <file>
-      <name>$PROJ_DIR$\..\..\Board\src\NRF_DIY.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\NRF_SmartCar.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\Board\src\VCAN_computer.c</name>
