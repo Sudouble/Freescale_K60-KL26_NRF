@@ -223,7 +223,7 @@ void  main(void)
         //参数发送区域
         //=======================================================
         //摄像头图像
-        //没法使用。。。。。
+        //SendPack_Camera(Camera, Camera_1, imgbuff, CAMERA_SIZE);
         //****************************************
         //CCD图像（不好用！！！）
         //SendPack_CCD(2, 1, (uint8_t *)&CCD_BUFF[0], TSL1401_SIZE, 1, 1);

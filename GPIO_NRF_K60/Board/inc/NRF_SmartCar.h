@@ -184,6 +184,7 @@ extern void SendPack_Short(int father, int child, float value, int hasHead, int 
 extern void SendPack_Echo(int father, int child, char *sendACK);  //发送确认信号
 extern void SendPack_PID(int father, int child, float P, float I, float D, int hasHead, int hasEnd); //一次发送只能小于32为的数组
 extern void SendPack_CCD(int father, int child, uint8 *ccdbuff, int ccdwidth, int hasHead, int hasEnd);//一次发送只能小于32为的数组
+extern void SendPack_Camera(int father, int child, uint8 *camerabuff, int camera_size);
 extern int NRF_Recieve(unsigned char *data, PIDSetting *pidsetting, int num_PID, DIYParameter *diypara,int numDIY, WholeSetting *wholesetting, int numWhole);//OK
 float atof_self(const unsigned char *str, int start, int end);
 int atoi_self(const unsigned char *str, int start, int end);

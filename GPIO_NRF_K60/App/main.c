@@ -17,6 +17,7 @@
 #include "common.h"
 #include "include.h"
 
+int SPEED_CONTROL_P=2.1,SPEED_CONTROL_I=1.5,SPEED_CONTROL_D=0,CAR_SPEED_SET=44;
 /*!
  *  @brief      PORTE中断服务函数
  *  @since      v5.0
@@ -109,7 +110,7 @@ void main()
         relen = nrf_rx(buff,DATA_PACKET);               //等待接收一个数据包，数据存储在buff里
         if(relen != 0)
         {
-//            NRF_Recieve(buff, _pidsettings, PIDSETTING_NUM, _diyparameter, DIYPARAMETER_NUM, _wholesettings, GLOBAL_SETTING_NUM);
+             NRF_Recieve(buff, _pidsettings, PIDSETTING_NUM, _diyparameter, DIYPARAMETER_NUM, _wholesettings, GLOBAL_SETTING_NUM);
 //            
 //            //在这里设置接收到的设置参数（PID和DIY参数）
 //            //========================================================
@@ -144,21 +145,23 @@ void main()
 //                SendPack_Echo(SendBackPID_ACK, Balance_Stand_ACK, "ACK");
 //            }
 //            //========================================================
-//            //速度
-//            if(_pidsettings[3].FlagValueChanged == 1)
-//            {
-//                SPEED_CONTROL_P = _pidsettings[3].Value_P;
-//                SPEED_CONTROL_I = _pidsettings[3].Value_I;
-//                SPEED_CONTROL_D = _pidsettings[3].Value_D;
-//                
+            //速度
+            if(_pidsettings[3].FlagValueChanged == 1)
+            {
+                SPEED_CONTROL_P = _pidsettings[3].Value_P;
+                SPEED_CONTROL_I = _pidsettings[3].Value_I;
+                SPEED_CONTROL_D = _pidsettings[3].Value_D;
+                
 //                //参数
 //                g_fSpeedControlOut = 0;
 //                g_fSpeedControlOutNew = 0;
 //                g_fSpeedControlOutOld = 0;
 //                fsampleerror1 = 0;
-//                _pidsettings[3].FlagValueChanged = 0;
-//                SendPack_Echo(SendBackPID_ACK, Balance_Speed_ACK, "ACK");
-//            }
+                _pidsettings[3].FlagValueChanged = 0;
+                SendPack_Echo(SendBackPID_ACK, Balance_Speed_ACK, "ACK");
+                
+                printf("recvi!");
+            }
 //            //========================================================
 //            //方向
 //            if(_pidsettings[4].FlagValueChanged == 1)
@@ -169,14 +172,14 @@ void main()
 //                _pidsettings[4].FlagValueChanged = 0;
 //                SendPack_Echo(SendBackPID_ACK, Balance_Direction_ACK, "ACK");
 //            }
-//            //////////////////////////////////////////////////////////
-//            //自定义参数一
-//            if (_diyparameter[0].FlagValueChanged == 1)
-//            {
-//                CAR_SPEED_SET = _diyparameter[0].DIY_Value;
-//                _diyparameter[0].FlagValueChanged = 0;
-//                SendPack_Echo(SendBackDIY_ACK, DIY_Para_1_ACK, "ACK");
-//            }
+            //////////////////////////////////////////////////////////
+            //自定义参数一
+            if (_diyparameter[0].FlagValueChanged == 1)
+            {
+                CAR_SPEED_SET = _diyparameter[0].DIY_Value;
+                _diyparameter[0].FlagValueChanged = 0;
+                SendPack_Echo(SendBackDIY_ACK, DIY_Para_1_ACK, "ACK");
+            }
 //            //=======================================================
 //            //自定义参数二
 //            if (_diyparameter[1].FlagValueChanged == 1)
@@ -187,24 +190,24 @@ void main()
 //            }
 //            //=======================================================
 //            //========================================
-//            //对于获取下位机参数的响应，写需要回发的变量类型
-//            if(_wholesettings[0].need_Send == 1)
-//            {
-//                
-//                printf("I will send\n");
-//                //****************************************
-//                //PID参数回发
-//                SendPack_PID(SendBackPID, Balance_Stand, ANGLE_CONTROL_P, 0, ANGLE_CONTROL_D, 1, 0); //直立PID
-//                SendPack_PID(SendBackPID, Balance_Speed, SPEED_CONTROL_P, SPEED_CONTROL_I, SPEED_CONTROL_D, 0, 0); //速度PID
-//                SendPack_PID(SendBackPID, Balance_Direction, DIRECTION_CONTROL_P, 0, DIRECTION_CONTROL_D, 0, 0); //方向PID
-//                //****************************************
-//                //自定义参数
-//                SendPack_Short(SendBackDIY,DIY_Para_1, 10, 0, 0);
-//                //SendPack_Short(SendBackDIY,DIY_Para_2, diyTest, 0, 0);
-//                SendPack_Short(SendBackDIY,DIY_Para_3, 10, 0, 1);
-//               
-//                _wholesettings[0].need_Send = 0;
-//            }     
+            //对于获取下位机参数的响应，写需要回发的变量类型
+            if(_wholesettings[0].need_Send == 1)
+            {
+                
+                printf("I will send\n");
+                //****************************************
+                //PID参数回发
+                //SendPack_PID(SendBackPID, Balance_Stand, ANGLE_CONTROL_P, 0, ANGLE_CONTROL_D, 1, 0); //直立PID
+                SendPack_PID(SendBackPID, Balance_Speed, SPEED_CONTROL_P, SPEED_CONTROL_I, SPEED_CONTROL_D, 0, 0); //速度PID
+                //SendPack_PID(SendBackPID, Balance_Direction, DIRECTION_CONTROL_P, 0, DIRECTION_CONTROL_D, 0, 0); //方向PID
+                //****************************************
+                //自定义参数
+                SendPack_Short(SendBackDIY,DIY_Para_1, 10, 0, 0);
+                //SendPack_Short(SendBackDIY,DIY_Para_2, diyTest, 0, 0);
+                //SendPack_Short(SendBackDIY,DIY_Para_3, 10, 0, 1);
+               
+                _wholesettings[0].need_Send = 0;
+            }     
           
               //========================================================
               //========================================================
@@ -230,7 +233,7 @@ void main()
         //参数发送区域
         //=======================================================
         //摄像头图像
-        //没法使用。。。。。
+        //SendPack_Camera(Camera, Camera_1, imgbuff, CAMERA_SIZE);
         //****************************************
         //CCD图像
         //SendPack_CCD(2, 1, (uint8_t *)&CCD_BUFF[0], TSL1401_SIZE, 1, 1);

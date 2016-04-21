@@ -327,6 +327,61 @@ void SendPack_CCD(int father, int child, uint8 *ccdbuff, int ccdwidth, int hasHe
     //printf("%d---%s", (int)buffer[0], buffer);
 }
 
+void SendPack_Camera(int father, int child, uint8 *camerabuff, int camera_size)
+{
+    char buffer[DATA_PACKET];
+    char buff_end[DATA_PACKET];
+    char tmpbuff[10];
+    int count_i = 0;
+    
+    //============================================
+    buffer[count_i++]='0';
+    
+    buffer[count_i++]='#';
+    
+    buffer[count_i++]='|';
+    buffer[count_i++]=48 + father;
+    buffer[count_i++]='|';
+    buffer[count_i++]=48 + child;
+    buffer[count_i++]='|';
+    
+    //CCD发送格式    
+    sprintf(tmpbuff, "(80+60)");
+    strcat(buffer, tmpbuff);
+    count_i += strlen(tmpbuff);
+    
+    buffer[count_i++]='\0';
+    buffer[0]=strlen(buffer) - 1;
+    
+    //NRF send buffer
+    if(buffer[0] < 31)
+    {
+        if(nrf_tx((uint8*)buffer, DATA_PACKET)==1)
+        {
+            while(nrf_tx_state() == NRF_TXING);         //等待发送完成
+        }
+    }
+    else
+    {
+        printf("in NRF_DIY.c of \"SendPack_Short\" is overflow!!");
+    }
+    
+    //Camera数据的发送
+    SendPack_Long(camerabuff, camera_size, 31);
+    
+    count_i = 0;
+    buff_end[count_i++]=1;
+    buff_end[count_i++]='|';
+    buff_end[count_i++]='$';
+    buff_end[count_i++]='\0';
+    buff_end[0]=strlen(buff_end) - 1;
+    
+    if(nrf_tx((uint8*)buff_end, DATA_PACKET)==1)
+    {
+      while(nrf_tx_state() == NRF_TXING);         //等待发送完成
+    }
+}
+
 int NRF_Recieve(unsigned char *data, PIDSetting *pidsetting, int num_PID, DIYParameter *diypara,int numDIY, WholeSetting *wholesetting, int numWhole)//OK
 {
     char i = 0, j = 0, maxJcount = 0;
