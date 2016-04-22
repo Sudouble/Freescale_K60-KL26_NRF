@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR ELF Linker V6.70.1.5641/W32 for ARM               21/Apr/2016  22:58:04 #
+# IAR ELF Linker V6.70.1.5641/W32 for ARM               22/Apr/2016  15:06:33 #
 # Copyright 2007-2013 IAR Systems AB.                                         #
 #                                                                             #
 #    Output file  =  F:\Project_Compotition\6.MyFreescal_10th\New_for_platfor #
@@ -150,7 +150,7 @@ __SystemLibrary = DLib
   .noinit              ro code  0x00000410     0x8  startup_MKL.o [1]
                               - 0x00000418     0x8
 
-"P1", part 2 of 2:                          0x3530
+"P1", part 2 of 2:                          0x3fb8
   .text                ro code  0x00000418   0xec6  xprintffull_nomb.o [3]
   .text                ro code  0x000012de    0x14  strchr.o [5]
   .text                ro code  0x000012f2    0x10  strlen.o [5]
@@ -174,92 +174,109 @@ __SystemLibrary = DLib
   .text                ro code  0x00001bb4     0x2  I64DivZer.o [5]
   .text                ro code  0x00001bb8     0x2  IntDivZer.o [5]
   .text                ro code  0x00001bba     0x2  xtls.o [3]
-  .text                ro code  0x00001bbc   0x534  FIRE_NRF24L0.o [1]
-  .text                ro code  0x000020f0   0x35c  MKL_spi.o [1]
-  .text                ro code  0x0000244c    0xd4  MKL_gpio.o [1]
-  .text                ro code  0x00002520    0xa4  MKL_port.o [1]
-  .text                ro code  0x000025c4    0xd0  misc.o [1]
-  .text                ro code  0x00002694     0x8  abs.o [3]
-  .text                ro code  0x0000269c    0x54  FIRE_MKL_conf.o [1]
-  .text                ro code  0x000026f0    0x24  printf.o [3]
-  .text                ro code  0x00002714   0x338  MKL_uart.o [1]
-  .text                ro code  0x00002a4c   0x340  MKL_mcg.o [1]
-  .data_init                    0x00002d8c   0x280  <Block>
-    Initializer bytes  ro data  0x00002d8c   0x280  <for .data-1>
-  .text                ro code  0x0000300c   0x1a4  main.o [1]
-  .text                ro code  0x000031b0   0x110  NRF_SmartCar.o [1]
-  .text                ro code  0x000032c0    0x64  MKL_SysTick.o [1]
-  .text                ro code  0x00003324    0xb4  FltMul.o [4]
-  .text                ro code  0x000033d8    0x3a  FltToS32.o [4]
-  .text                ro code  0x00003414    0x38  sprintf.o [3]
-  .text                ro code  0x0000344c    0x1c  strcat.o [3]
-  .text                ro code  0x00003468   0x184  system_MKL.o [1]
-  .text                ro code  0x000035ec    0x20  MKL_wdog.o [1]
-  .rodata              const    0x0000360c    0x54  MKL_SysTick.o [1]
-  .rodata              const    0x00003660    0x50  MKL_spi.o [1]
-  .rodata              const    0x000036b0    0x4c  misc.o [1]
-  .rodata              const    0x000036fc    0x3c  FIRE_MKL_conf.o [1]
-  .rodata              const    0x00003738    0x30  main.o [1]
-  .rodata              const    0x00003768    0x30  NRF_SmartCar.o [1]
-  .rodata              const    0x00003798    0x28  main.o [1]
-  .text                ro code  0x000037c0    0x28  data_init.o [5]
-  .rodata              const    0x000037e8    0x24  FIRE_MKL_conf.o [1]
-  .iar.init_table      const    0x0000380c    0x10  - Linker created -
-  .text                ro code  0x0000381c    0x1a  cmain.o [5]
-  .text                ro code  0x00003836     0x4  low_level_init.o [3]
-  .text                ro code  0x0000383a     0x8  exit.o [3]
-  .text                ro code  0x00003844     0xa  cexit.o [5]
-  .text                ro code  0x00003850    0x14  exit.o [6]
-  .rodata              const    0x00003864    0x18  xprintffull_nomb.o [3]
-  .text                ro code  0x0000387c    0x16  xprout.o [3]
-  .text                ro code  0x00003894    0x10  putchar.o [3]
-  .text                ro code  0x000038a4     0xc  cstartup_M.o [5]
-  .rodata              const    0x000038b0     0x8  FIRE_NRF24L0.o [1]
-  .rodata              const    0x000038b8     0x8  NRF_SmartCar.o [1]
-  Initializer bytes    ro data  0x000038c0    0x88  <for P2 s0>
-                              - 0x00003948  0x3530
+  .text                ro code  0x00001bbc   0x7f8  NRF_SmartCar.o [1]
+  .text                ro code  0x000023b4    0xb4  FltMul.o [4]
+  .text                ro code  0x00002468    0x3a  FltToS32.o [4]
+  .text                ro code  0x000024a4    0x38  sprintf.o [3]
+  .text                ro code  0x000024dc    0x1c  strcat.o [3]
+  .text                ro code  0x000024f8   0x534  FIRE_NRF24L0.o [1]
+  .text                ro code  0x00002a2c    0x24  printf.o [3]
+  .text                ro code  0x00002a50    0x34  ABImemset.o [5]
+  .text                ro code  0x00002a84    0x32  FltToDbl.o [4]
+  .text                ro code  0x00002ab6    0x62  DblToFlt.o [4]
+  .text                ro code  0x00002b18    0x20  FltCmpEq.o [4]
+  .text                ro code  0x00002b38    0x32  I32ToFlt.o [4]
+  .text                ro code  0x00002b6a   0x116  FltAddSub.o [4]
+  .text                ro code  0x00002c80   0x35c  MKL_spi.o [1]
+  .text                ro code  0x00002fdc    0xd4  MKL_gpio.o [1]
+  .text                ro code  0x000030b0    0xa4  MKL_port.o [1]
+  .text                ro code  0x00003154    0xd0  misc.o [1]
+  .text                ro code  0x00003224     0x8  abs.o [3]
+  .text                ro code  0x0000322c    0x54  FIRE_MKL_conf.o [1]
+  .text                ro code  0x00003280   0x338  MKL_uart.o [1]
+  .text                ro code  0x000035b8   0x340  MKL_mcg.o [1]
+  .data_init                    0x000038f8   0x288  <Block>
+    Initializer bytes  ro data  0x000038f8   0x288  <for .data-1>
+  .text                ro code  0x00003b80   0x24c  main.o [1]
+  .text                ro code  0x00003dcc    0x64  MKL_SysTick.o [1]
+  .text                ro code  0x00003e30   0x184  system_MKL.o [1]
+  .text                ro code  0x00003fb4    0x20  MKL_wdog.o [1]
+  .rodata              const    0x00003fd4    0x54  MKL_SysTick.o [1]
+  .rodata              const    0x00004028    0x50  MKL_spi.o [1]
+  .rodata              const    0x00004078    0x4c  misc.o [1]
+  .rodata              const    0x000040c4    0x3c  FIRE_MKL_conf.o [1]
+  .rodata              const    0x00004100    0x30  main.o [1]
+  .rodata              const    0x00004130    0x30  NRF_SmartCar.o [1]
+  .rodata              const    0x00004160    0x30  NRF_SmartCar.o [1]
+  .rodata              const    0x00004190    0x30  NRF_SmartCar.o [1]
+  .rodata              const    0x000041c0    0x2c  NRF_SmartCar.o [1]
+  .rodata              const    0x000041ec    0x28  main.o [1]
+  .text                ro code  0x00004214    0x28  data_init.o [5]
+  .rodata              const    0x0000423c    0x24  FIRE_MKL_conf.o [1]
+  .iar.init_table      const    0x00004260    0x10  - Linker created -
+  .text                ro code  0x00004270    0x1a  cmain.o [5]
+  .text                ro code  0x0000428a     0x4  low_level_init.o [3]
+  .text                ro code  0x0000428e     0x8  exit.o [3]
+  .text                ro code  0x00004298     0xa  cexit.o [5]
+  .text                ro code  0x000042a4    0x14  exit.o [6]
+  .rodata              const    0x000042b8    0x18  xprintffull_nomb.o [3]
+  .text                ro code  0x000042d0    0x16  xprout.o [3]
+  .text                ro code  0x000042e8    0x10  putchar.o [3]
+  .rodata              const    0x000042f8    0x10  main.o [1]
+  .rodata              const    0x00004308     0xc  NRF_SmartCar.o [1]
+  .text                ro code  0x00004314     0xc  cstartup_M.o [5]
+  .rodata              const    0x00004320     0x8  FIRE_NRF24L0.o [1]
+  .rodata              const    0x00004328     0x8  NRF_SmartCar.o [1]
+  .rodata              const    0x00004330     0x8  NRF_SmartCar.o [1]
+  .rodata              const    0x00004338     0x8  NRF_SmartCar.o [1]
+  .rodata              const    0x00004340     0x8  NRF_SmartCar.o [1]
+  Initializer bytes    ro data  0x00004348    0x88  <for P2 s0>
+                              - 0x000043d0  0x3fb8
 
-"P2", part 1 of 4:                           0x280
-  .data                         0x1fffe410   0x280  <Block>
-    .data-1                     0x1fffe410   0x280  <Init block>
+"P2", part 1 of 4:                           0x288
+  .data                         0x1fffe410   0x288  <Block>
+    .data-1                     0x1fffe410   0x288  <Init block>
       .data            inited   0x1fffe410   0x1bc  FIRE_MKL_conf.o [1]
       .data            inited   0x1fffe5cc     0x8  FIRE_NRF24L0.o [1]
       .data            inited   0x1fffe5d4     0x8  FIRE_NRF24L0.o [1]
-      .data            inited   0x1fffe5dc    0x14  MKL_gpio.o [1]
-      .data            inited   0x1fffe5f0    0x34  MKL_mcg.o [1]
-      .data            inited   0x1fffe624     0x4  MKL_mcg.o [1]
-      .data            inited   0x1fffe628    0x14  MKL_port.o [1]
-      .data            inited   0x1fffe63c     0x8  MKL_spi.o [1]
-      .data            inited   0x1fffe644     0xc  MKL_uart.o [1]
-      .data            inited   0x1fffe650    0x40  xfiles.o [3]
-                              - 0x1fffe690   0x280
+      .data            inited   0x1fffe5dc     0x4  main.o [1]
+      .data            inited   0x1fffe5e0     0x4  main.o [1]
+      .data            inited   0x1fffe5e4    0x14  MKL_gpio.o [1]
+      .data            inited   0x1fffe5f8    0x34  MKL_mcg.o [1]
+      .data            inited   0x1fffe62c     0x4  MKL_mcg.o [1]
+      .data            inited   0x1fffe630    0x14  MKL_port.o [1]
+      .data            inited   0x1fffe644     0x8  MKL_spi.o [1]
+      .data            inited   0x1fffe64c     0xc  MKL_uart.o [1]
+      .data            inited   0x1fffe658    0x40  xfiles.o [3]
+                              - 0x1fffe698   0x288
 
-"P2", part 2 of 4:                           0xa71
-  .bss                          0x1fffe690   0xa71  <Block>
-    .bss               zero     0x1fffe690   0xa00  FIRE_NRF24L0.o [1]
-    .bss               zero     0x1ffff090     0x4  FIRE_NRF24L0.o [1]
-    .bss               zero     0x1ffff094     0x4  FIRE_NRF24L0.o [1]
-    .bss               zero     0x1ffff098     0x4  MKL_wdog.o [1]
-    .bss               zero     0x1ffff09c     0x4  system_MKL.o [1]
-    .bss               zero     0x1ffff0a0     0x4  system_MKL.o [1]
-    .bss               zero     0x1ffff0a4     0x4  system_MKL.o [1]
+"P2", part 2 of 4:                           0xa75
+  .bss                          0x1fffe698   0xa75  <Block>
+    .bss               zero     0x1fffe698   0xa00  FIRE_NRF24L0.o [1]
+    .bss               zero     0x1ffff098     0x4  FIRE_NRF24L0.o [1]
+    .bss               zero     0x1ffff09c     0x4  FIRE_NRF24L0.o [1]
+    .bss               zero     0x1ffff0a0     0x4  main.o [1]
+    .bss               zero     0x1ffff0a4     0x4  MKL_wdog.o [1]
     .bss               zero     0x1ffff0a8     0x4  system_MKL.o [1]
-    .bss               zero     0x1ffff0ac    0x50  xfiles.o [3]
-    .bss               zero     0x1ffff0fc     0x1  FIRE_NRF24L0.o [1]
-    .bss               zero     0x1ffff0fd     0x1  FIRE_NRF24L0.o [1]
-    .bss               zero     0x1ffff0fe     0x1  FIRE_NRF24L0.o [1]
-    .bss               zero     0x1ffff0ff     0x1  FIRE_NRF24L0.o [1]
-    .bss               zero     0x1ffff100     0x1  FIRE_NRF24L0.o [1]
-                              - 0x1ffff101   0xa71
+    .bss               zero     0x1ffff0ac     0x4  system_MKL.o [1]
+    .bss               zero     0x1ffff0b0     0x4  system_MKL.o [1]
+    .bss               zero     0x1ffff0b4     0x4  system_MKL.o [1]
+    .bss               zero     0x1ffff0b8    0x50  xfiles.o [3]
+    .bss               zero     0x1ffff108     0x1  FIRE_NRF24L0.o [1]
+    .bss               zero     0x1ffff109     0x1  FIRE_NRF24L0.o [1]
+    .bss               zero     0x1ffff10a     0x1  FIRE_NRF24L0.o [1]
+    .bss               zero     0x1ffff10b     0x1  FIRE_NRF24L0.o [1]
+    .bss               zero     0x1ffff10c     0x1  FIRE_NRF24L0.o [1]
+                              - 0x1ffff10d   0xa75
 
 "P2", part 3 of 4:                             0x3
-  CodeRelocateRam               0x1ffff101     0x0  <Block>
-                              - 0x1ffff101     0x0
+  CodeRelocateRam               0x1ffff10d     0x0  <Block>
+                              - 0x1ffff10d     0x0
 
 "P2", part 4 of 4:                            0x88
-  P2 s0                         0x1ffff104    0x88  <Init block>
-    __DLIB_PERTHREAD   inited   0x1ffff104    0x88  localeconv.o [3]
-                              - 0x1ffff18c    0x88
+  P2 s0                         0x1ffff110    0x88  <Init block>
+    __DLIB_PERTHREAD   inited   0x1ffff110    0x88  localeconv.o [3]
+                              - 0x1ffff198    0x88
 
 
 *******************************************************************************
@@ -269,8 +286,8 @@ __SystemLibrary = DLib
           Address     Size
           -------     ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0xa71:
-          0x1fffe690  0xa71
+    1 destination range, total size 0xa75:
+          0x1fffe698  0xa75
 
 
 
@@ -290,14 +307,14 @@ F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF
     MKL_spi.o               860       88        8
     MKL_uart.o              824       12       12
     MKL_wdog.o               32                 4
-    NRF_SmartCar.o          272       56
-    main.o                  420       88
+    NRF_SmartCar.o        2 040      232
+    main.o                  588      112       12
     misc.o                  208       76
     startup_MKL.o             8
     system_MKL.o            388                16
     vectors.o                      1 040
     ---------------------------------------------
-    Total:                5 736    2 104    3 169
+    Total:                7 672    2 304    3 181
 
 command line: [2]
     ---------------------------------------------
@@ -327,17 +344,23 @@ m6M_tl.a: [4]
     DblCmpLe.o               50
     DblDiv.o                194
     DblMul.o                388
+    DblToFlt.o               98
     DblToI32.o               82
+    FltAddSub.o             278
+    FltCmpEq.o               32
     FltMul.o                180
+    FltToDbl.o               50
     FltToS32.o               58
     I32ToDbl.o               52
+    I32ToFlt.o               50
     xdnorm.o                 68
     xdscale.o               284
     ---------------------------------------------
-    Total:                1 830
+    Total:                2 338
 
 rt6M_tl.a: [5]
     ABImemcpy.o              92
+    ABImemset.o              52
     I32DivModFast.o         224
     I64DivMod.o             106
     I64DivZer.o               2
@@ -351,7 +374,7 @@ rt6M_tl.a: [5]
     strlen.o                 16
     zero_init3.o             42
     ---------------------------------------------
-    Total:                  616
+    Total:                  668
 
 shb_l.a: [6]
     exit.o                   20
@@ -361,7 +384,7 @@ shb_l.a: [6]
     Gaps                     10
     Linker created                    16
 -------------------------------------------------
-    Grand Total:         12 320    2 344    3 449
+    Grand Total:         14 816    2 544    3 461
 
 
 *******************************************************************************
@@ -370,39 +393,45 @@ shb_l.a: [6]
 
 Entry                      Address   Size  Type      Object
 -----                      -------   ----  ----      ------
-.bss$$Base              0x1fffe690          --   Gb  - Linker created -
-.bss$$Limit             0x1ffff101          --   Gb  - Linker created -
+.bss$$Base              0x1fffe698          --   Gb  - Linker created -
+.bss$$Limit             0x1ffff10d          --   Gb  - Linker created -
 .data$$Base             0x1fffe410          --   Gb  - Linker created -
-.data$$Limit            0x1fffe690          --   Gb  - Linker created -
-.data_init$$Base        0x00002d8c          --   Gb  - Linker created -
-.data_init$$Limit       0x0000300c          --   Gb  - Linker created -
-?main                   0x0000381d         Code  Gb  cmain.o [5]
-ASSERT_FAILED_STR       0x000037e8   0x24  Data  Gb  FIRE_MKL_conf.o [1]
+.data$$Limit            0x1fffe698          --   Gb  - Linker created -
+.data_init$$Base        0x000038f8          --   Gb  - Linker created -
+.data_init$$Limit       0x00003b80          --   Gb  - Linker created -
+?main                   0x00004271         Code  Gb  cmain.o [5]
+ASSERT_FAILED_STR       0x0000423c   0x24  Data  Gb  FIRE_MKL_conf.o [1]
 CodeRelocate$$Base      0x00000410          --   Gb  - Linker created -
 CodeRelocate$$Limit     0x00000410          --   Gb  - Linker created -
-CodeRelocateRam$$Base   0x1ffff101          --   Gb  - Linker created -
-CodeRelocateRam$$Limit  0x1ffff101          --   Gb  - Linker created -
-GPIOX                   0x1fffe5dc   0x14  Data  Gb  MKL_gpio.o [1]
-Init_NRF                0x0000303b   0x28  Code  Gb  main.o [1]
-NRF_ISR_RX_FIFO         0x1fffe690  0xa00  Data  Gb  FIRE_NRF24L0.o [1]
-NVIC_EnableIRQ          0x0000300d    0xe  Code  Lc  main.o [1]
-PORTC_PORTD_IRQHandler  0x0000301b   0x20  Code  Gb  main.o [1]
-PORTX                   0x1fffe628   0x14  Data  Gb  MKL_port.o [1]
+CodeRelocateRam$$Base   0x1ffff10d          --   Gb  - Linker created -
+CodeRelocateRam$$Limit  0x1ffff10d          --   Gb  - Linker created -
+GPIOX                   0x1fffe5e4   0x14  Data  Gb  MKL_gpio.o [1]
+Init_NRF                0x00003baf   0x28  Code  Gb  main.o [1]
+NRF_ISR_RX_FIFO         0x1fffe698  0xa00  Data  Gb  FIRE_NRF24L0.o [1]
+NRF_Recieve             0x00001ef9  0x352  Code  Gb  NRF_SmartCar.o [1]
+NVIC_EnableIRQ          0x00003b81    0xe  Code  Lc  main.o [1]
+PORTC_PORTD_IRQHandler  0x00003b8f   0x20  Code  Gb  main.o [1]
+PORTX                   0x1fffe630   0x14  Data  Gb  MKL_port.o [1]
 RX_ADDRESS              0x1fffe5d4    0x8  Data  Gb  FIRE_NRF24L0.o [1]
-Region$$Table$$Base     0x0000380c          --   Gb  - Linker created -
-Region$$Table$$Limit    0x0000381c          --   Gb  - Linker created -
+Region$$Table$$Base     0x00004260          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00004270          --   Gb  - Linker created -
 Reset_Handler           0x00000411         Code  Gb  startup_MKL.o [1]
-SPIN                    0x1fffe63c    0x8  Data  Gb  MKL_spi.o [1]
-SendPack_Short          0x000031b1  0x100  Code  Gb  NRF_SmartCar.o [1]
+SPEED_CONTROL_D         0x1ffff0a0    0x4  Data  Gb  main.o [1]
+SPEED_CONTROL_I         0x1fffe5e0    0x4  Data  Gb  main.o [1]
+SPEED_CONTROL_P         0x1fffe5dc    0x4  Data  Gb  main.o [1]
+SPIN                    0x1fffe644    0x8  Data  Gb  MKL_spi.o [1]
+SendPack_Echo           0x00001cbd   0xe0  Code  Gb  NRF_SmartCar.o [1]
+SendPack_PID            0x00001d9d  0x13c  Code  Gb  NRF_SmartCar.o [1]
+SendPack_Short          0x00001bbd  0x100  Code  Gb  NRF_SmartCar.o [1]
 TX_ADDRESS              0x1fffe5cc    0x8  Data  Gb  FIRE_NRF24L0.o [1]
-UARTN                   0x1fffe644    0xc  Data  Gb  MKL_uart.o [1]
+UARTN                   0x1fffe64c    0xc  Data  Gb  MKL_uart.o [1]
 _GenldFullNoMb          0x00001011  0x29a  Code  Lc  xprintffull_nomb.o [3]
 _LdtobFullNoMb          0x00000b79  0x484  Code  Lc  xprintffull_nomb.o [3]
 _LitobFullNoMb          0x00000a5d  0x118  Code  Lc  xprintffull_nomb.o [3]
-_Locale_aeabi_lconv     0x1ffff154   0x38  Data  Gb  localeconv.o [3]
-_Locale_lconv           0x1ffff104   0x50  Data  Gb  localeconv.o [3]
+_Locale_aeabi_lconv     0x1ffff160   0x38  Data  Gb  localeconv.o [3]
+_Locale_lconv           0x1ffff110   0x50  Data  Gb  localeconv.o [3]
 _PrintfFullNoMb         0x00000419  0x644  Code  Gb  xprintffull_nomb.o [3]
-_Prout                  0x0000387d   0x16  Code  Gb  xprout.o [3]
+_Prout                  0x000042d1   0x16  Code  Gb  xprout.o [3]
 _PutcharsFullNoMb       0x000012ab   0x30  Code  Lc  xprintffull_nomb.o [3]
 _SProut                 0x00001b23    0xa  Code  Gb  xsprout.o [3]
 __BOOT_STACK_ADDRESS {Abs}
@@ -411,18 +440,25 @@ __VECTOR_RAM {Abs}      0x1fffe000          --   Gb  command line/config [2]
 __VECTOR_TABLE {Abs}    0x00000000          --   Gb  command line/config [2]
 __aeabi_cdcmple         0x00001425         Code  Gb  DblCmpLe.o [4]
 __aeabi_cdrcmple        0x00001457         Code  Gb  DblCmpGe.o [4]
+__aeabi_cfcmpeq         0x00002b19         Code  Gb  FltCmpEq.o [4]
+__aeabi_d2f             0x00002ab7         Code  Gb  DblToFlt.o [4]
 __aeabi_d2iz            0x000015a5         Code  Gb  DblToI32.o [4]
 __aeabi_d2uiz           0x000015c9         Code  Gb  DblToI32.o [4]
 __aeabi_ddiv            0x00001a61         Code  Gb  DblDiv.o [4]
 __aeabi_dmul            0x000018dd         Code  Gb  DblMul.o [4]
 __aeabi_dsub            0x0000170f         Code  Gb  DblAddSub.o [4]
-__aeabi_f2iz            0x000033d9         Code  Gb  FltToS32.o [4]
-__aeabi_fmul            0x00003325         Code  Gb  FltMul.o [4]
+__aeabi_f2d             0x00002a85         Code  Gb  FltToDbl.o [4]
+__aeabi_f2iz            0x00002469         Code  Gb  FltToS32.o [4]
+__aeabi_fadd            0x00002b6b         Code  Gb  FltAddSub.o [4]
+__aeabi_fmul            0x000023b5         Code  Gb  FltMul.o [4]
 __aeabi_i2d             0x00001621         Code  Gb  I32ToDbl.o [4]
+__aeabi_i2f             0x00002b39         Code  Gb  I32ToFlt.o [4]
 __aeabi_idiv            0x00001829         Code  Gb  I32DivModFast.o [5]
 __aeabi_idiv0           0x00001bb9         Code  Gb  IntDivZer.o [5]
 __aeabi_idivmod         0x00001829         Code  Gb  I32DivModFast.o [5]
 __aeabi_ldiv0           0x00001bb5         Code  Gb  I64DivZer.o [5]
+__aeabi_memclr4         0x00002a81         Code  Gb  ABImemset.o [5]
+__aeabi_memclr8         0x00002a81         Code  Gb  ABImemset.o [5]
 __aeabi_memcpy          0x00001385         Code  Gb  ABImemcpy.o [5]
 __aeabi_memcpy4         0x000013ad         Code  Gb  ABImemcpy.o [5]
 __aeabi_memcpy8         0x000013ad         Code  Gb  ABImemcpy.o [5]
@@ -430,91 +466,95 @@ __aeabi_ui2d            0x00001635         Code  Gb  I32ToDbl.o [4]
 __aeabi_uidiv           0x0000182f         Code  Gb  I32DivModFast.o [5]
 __aeabi_uidivmod        0x0000182f         Code  Gb  I32DivModFast.o [5]
 __aeabi_uldivmod        0x0000131b         Code  Gb  I64DivMod.o [5]
-__cmain                 0x0000381d         Code  Gb  cmain.o [5]
-__exit                  0x00003851   0x14  Code  Gb  exit.o [6]
+__cmain                 0x00004271         Code  Gb  cmain.o [5]
+__exit                  0x000042a5   0x14  Code  Gb  exit.o [6]
 __iar_Dnorm             0x000013e1   0x44  Code  Gb  xdnorm.o [4]
 __iar_Dscale            0x00001489  0x11c  Code  Gb  xdscale.o [4]
 __iar_Locale_lconv_init
                         0x00001b2d   0x32  Code  Gb  localeconv.o [3]
 __iar_Memchr            0x00001303   0x18  Code  Gb  memchr.o [5]
-__iar_Stdout            0x1fffe650   0x40  Data  Gb  xfiles.o [3]
+__iar_Memset4_word      0x00002a51         Code  Gb  ABImemset.o [5]
+__iar_Stdout            0x1fffe658   0x40  Data  Gb  xfiles.o [3]
 __iar_Strchr            0x000012df   0x14  Code  Gb  strchr.o [5]
 __iar_d2uiz             0x000015cd         Code  Gb  DblToI32.o [4]
-__iar_data_init3        0x000037c1   0x28  Code  Gb  data_init.o [5]
+__iar_data_init3        0x00004215   0x28  Code  Gb  data_init.o [5]
 __iar_dlib_perthread_access
                         0x00001bbb    0x2  Code  Gb  xtls.o [3]
-__iar_program_start     0x000038a5         Code  Gb  cstartup_M.o [5]
+__iar_program_start     0x00004315         Code  Gb  cstartup_M.o [5]
 __iar_ui2d              0x00001639         Code  Gb  I32ToDbl.o [4]
+__iar_ui2f              0x00002b51         Code  Gb  I32ToFlt.o [4]
 __iar_zero_init3        0x000015f7   0x2a  Code  Gb  zero_init3.o [5]
-__low_level_init        0x00003837    0x4  Code  Gb  low_level_init.o [3]
+__low_level_init        0x0000428b    0x4  Code  Gb  low_level_init.o [3]
 __vector_table          0x00000000  0x410  Data  Gb  vectors.o [1]
-_call_main              0x00003829         Code  Gb  cmain.o [5]
-_exit                   0x00003845         Code  Gb  cexit.o [5]
-_main                   0x00003833         Code  Gb  cmain.o [5]
-abs                     0x00002695    0x8  Code  Gb  abs.o [3]
-assert_failed           0x0000269d   0x12  Code  Gb  FIRE_MKL_conf.o [1]
-bus_clk_khz             0x1ffff0a8    0x4  Data  Gb  system_MKL.o [1]
-clk_out_init            0x000034eb   0x24  Code  Gb  system_MKL.o [1]
-common_startup          0x0000350f   0x92  Code  Gb  system_MKL.o [1]
-core_clk_khz            0x1ffff0a0    0x4  Data  Gb  system_MKL.o [1]
-core_clk_mhz            0x1ffff0a4    0x4  Data  Gb  system_MKL.o [1]
-default_isr             0x000026c5   0x1c  Code  Gb  FIRE_MKL_conf.o [1]
+_call_main              0x0000427d         Code  Gb  cmain.o [5]
+_exit                   0x00004299         Code  Gb  cexit.o [5]
+_main                   0x00004287         Code  Gb  cmain.o [5]
+abs                     0x00003225    0x8  Code  Gb  abs.o [3]
+assert_failed           0x0000322d   0x12  Code  Gb  FIRE_MKL_conf.o [1]
+atof_self               0x0000224b   0x92  Code  Gb  NRF_SmartCar.o [1]
+atoi_self               0x000022e1   0xac  Code  Gb  NRF_SmartCar.o [1]
+bus_clk_khz             0x1ffff0b4    0x4  Data  Gb  system_MKL.o [1]
+clk_out_init            0x00003eb3   0x24  Code  Gb  system_MKL.o [1]
+common_startup          0x00003ed7   0x92  Code  Gb  system_MKL.o [1]
+core_clk_khz            0x1ffff0ac    0x4  Data  Gb  system_MKL.o [1]
+core_clk_mhz            0x1ffff0b0    0x4  Data  Gb  system_MKL.o [1]
+default_isr             0x00003255   0x1c  Code  Gb  FIRE_MKL_conf.o [1]
 div                     0x00001b95   0x20  Code  Gb  div.o [3]
-exit                    0x0000383b    0x8  Code  Gb  exit.o [3]
-fire_cpy                0x00002615   0x80  Code  Gb  misc.o [1]
-fputc                   0x000026af   0x14  Code  Gb  FIRE_MKL_conf.o [1]
-gpio_init               0x0000244d   0xce  Code  Gb  MKL_gpio.o [1]
+exit                    0x0000428f    0x8  Code  Gb  exit.o [3]
+fire_cpy                0x000031a5   0x80  Code  Gb  misc.o [1]
+fputc                   0x0000323f   0x14  Code  Gb  FIRE_MKL_conf.o [1]
+gpio_init               0x00002fdd   0xce  Code  Gb  MKL_gpio.o [1]
 localeconv              0x00001b5f   0x18  Code  Gb  localeconv.o [3]
-main                    0x00003063  0x12a  Code  Gb  main.o [1]
-mcg_cfg                 0x1fffe5f0   0x34  Data  Gb  MKL_mcg.o [1]
-mcg_div                 0x1fffe624    0x4  Data  Gb  MKL_mcg.o [1]
-mcg_div_count           0x00002a4d  0x222  Code  Gb  MKL_mcg.o [1]
-nrf_handler             0x00001fa5  0x122  Code  Gb  FIRE_NRF24L0.o [1]
-nrf_init                0x00001bbd   0xa8  Code  Gb  FIRE_NRF24L0.o [1]
-nrf_irq_tx_addr         0x1ffff090    0x4  Data  Gb  FIRE_NRF24L0.o [1]
-nrf_irq_tx_flag         0x1ffff100    0x1  Data  Gb  FIRE_NRF24L0.o [1]
-nrf_irq_tx_pnum         0x1ffff094    0x4  Data  Gb  FIRE_NRF24L0.o [1]
-nrf_link_check          0x00001d03   0x76  Code  Gb  FIRE_NRF24L0.o [1]
-nrf_mode                0x1ffff0fc    0x1  Data  Gb  FIRE_NRF24L0.o [1]
-nrf_readbuf             0x00001cdb   0x28  Code  Lc  FIRE_NRF24L0.o [1]
-nrf_readreg             0x00001c8b   0x28  Code  Lc  FIRE_NRF24L0.o [1]
-nrf_rx                  0x00001e21   0xe6  Code  Gb  FIRE_NRF24L0.o [1]
-nrf_rx_flag             0x1ffff0ff    0x1  Data  Gb  FIRE_NRF24L0.o [1]
-nrf_rx_front            0x1ffff0fd    0x1  Data  Gb  FIRE_NRF24L0.o [1]
-nrf_rx_mode             0x00001d79   0x54  Code  Lc  FIRE_NRF24L0.o [1]
-nrf_rx_rear             0x1ffff0fe    0x1  Data  Gb  FIRE_NRF24L0.o [1]
-nrf_tx                  0x00001f15   0x62  Code  Gb  FIRE_NRF24L0.o [1]
-nrf_tx_mode             0x00001dcd   0x4c  Code  Lc  FIRE_NRF24L0.o [1]
-nrf_tx_state            0x00001f77   0x26  Code  Gb  FIRE_NRF24L0.o [1]
-nrf_writebuf            0x00001cb3   0x28  Code  Lc  FIRE_NRF24L0.o [1]
-nrf_writereg            0x00001c65   0x26  Code  Lc  FIRE_NRF24L0.o [1]
-obuf                    0x1ffff0ac   0x50  Data  Lc  xfiles.o [3]
-pll_clk_mhz             0x1ffff09c    0x4  Data  Gb  system_MKL.o [1]
-pll_init                0x00002c81   0xb8  Code  Gb  MKL_mcg.o [1]
-port_init               0x00002521   0x36  Code  Gb  MKL_port.o [1]
-port_init_NoALT         0x00002557   0x60  Code  Gb  MKL_port.o [1]
-printf                  0x000026f1   0x24  Code  Gb  printf.o [3]
-putchar                 0x00003895   0x10  Code  Gb  putchar.o [3]
-set_vector_handler      0x000025e5   0x24  Code  Gb  misc.o [1]
-spi_init                0x00002237   0xc4  Code  Gb  MKL_spi.o [1]
-spi_mosi                0x000022fb   0x7c  Code  Gb  MKL_spi.o [1]
-spi_mosi_cmd            0x0000237d   0xb6  Code  Gb  MKL_spi.o [1]
-spi_pcs_io              0x000020f1   0x4c  Code  Lc  MKL_spi.o [1]
-spi_set_baud            0x0000213d   0xfa  Code  Gb  MKL_spi.o [1]
-sprintf                 0x00003415   0x38  Code  Gb  sprintf.o [3]
-start                   0x00003469   0x18  Code  Gb  system_MKL.o [1]
-start_check             0x000026c3    0x2  Code  Gb  FIRE_MKL_conf.o [1]
-strcat                  0x0000344d   0x1c  Code  Gb  strcat.o [3]
+main                    0x00003bdd  0x1b2  Code  Gb  main.o [1]
+mcg_cfg                 0x1fffe5f8   0x34  Data  Gb  MKL_mcg.o [1]
+mcg_div                 0x1fffe62c    0x4  Data  Gb  MKL_mcg.o [1]
+mcg_div_count           0x000035b9  0x222  Code  Gb  MKL_mcg.o [1]
+nrf_handler             0x000028e1  0x122  Code  Gb  FIRE_NRF24L0.o [1]
+nrf_init                0x000024f9   0xa8  Code  Gb  FIRE_NRF24L0.o [1]
+nrf_irq_tx_addr         0x1ffff098    0x4  Data  Gb  FIRE_NRF24L0.o [1]
+nrf_irq_tx_flag         0x1ffff10c    0x1  Data  Gb  FIRE_NRF24L0.o [1]
+nrf_irq_tx_pnum         0x1ffff09c    0x4  Data  Gb  FIRE_NRF24L0.o [1]
+nrf_link_check          0x0000263f   0x76  Code  Gb  FIRE_NRF24L0.o [1]
+nrf_mode                0x1ffff108    0x1  Data  Gb  FIRE_NRF24L0.o [1]
+nrf_readbuf             0x00002617   0x28  Code  Lc  FIRE_NRF24L0.o [1]
+nrf_readreg             0x000025c7   0x28  Code  Lc  FIRE_NRF24L0.o [1]
+nrf_rx                  0x0000275d   0xe6  Code  Gb  FIRE_NRF24L0.o [1]
+nrf_rx_flag             0x1ffff10b    0x1  Data  Gb  FIRE_NRF24L0.o [1]
+nrf_rx_front            0x1ffff109    0x1  Data  Gb  FIRE_NRF24L0.o [1]
+nrf_rx_mode             0x000026b5   0x54  Code  Lc  FIRE_NRF24L0.o [1]
+nrf_rx_rear             0x1ffff10a    0x1  Data  Gb  FIRE_NRF24L0.o [1]
+nrf_tx                  0x00002851   0x62  Code  Gb  FIRE_NRF24L0.o [1]
+nrf_tx_mode             0x00002709   0x4c  Code  Lc  FIRE_NRF24L0.o [1]
+nrf_tx_state            0x000028b3   0x26  Code  Gb  FIRE_NRF24L0.o [1]
+nrf_writebuf            0x000025ef   0x28  Code  Lc  FIRE_NRF24L0.o [1]
+nrf_writereg            0x000025a1   0x26  Code  Lc  FIRE_NRF24L0.o [1]
+obuf                    0x1ffff0b8   0x50  Data  Lc  xfiles.o [3]
+pll_clk_mhz             0x1ffff0a8    0x4  Data  Gb  system_MKL.o [1]
+pll_init                0x000037ed   0xb8  Code  Gb  MKL_mcg.o [1]
+port_init               0x000030b1   0x36  Code  Gb  MKL_port.o [1]
+port_init_NoALT         0x000030e7   0x60  Code  Gb  MKL_port.o [1]
+printf                  0x00002a2d   0x24  Code  Gb  printf.o [3]
+putchar                 0x000042e9   0x10  Code  Gb  putchar.o [3]
+set_vector_handler      0x00003175   0x24  Code  Gb  misc.o [1]
+spi_init                0x00002dc7   0xc4  Code  Gb  MKL_spi.o [1]
+spi_mosi                0x00002e8b   0x7c  Code  Gb  MKL_spi.o [1]
+spi_mosi_cmd            0x00002f0d   0xb6  Code  Gb  MKL_spi.o [1]
+spi_pcs_io              0x00002c81   0x4c  Code  Lc  MKL_spi.o [1]
+spi_set_baud            0x00002ccd   0xfa  Code  Gb  MKL_spi.o [1]
+sprintf                 0x000024a5   0x38  Code  Gb  sprintf.o [3]
+start                   0x00003e31   0x18  Code  Gb  system_MKL.o [1]
+start_check             0x00003253    0x2  Code  Gb  FIRE_MKL_conf.o [1]
+strcat                  0x000024dd   0x1c  Code  Gb  strcat.o [3]
 strlen                  0x000012f3   0x10  Code  Gb  strlen.o [5]
-sysinit                 0x00003481   0x6a  Code  Gb  system_MKL.o [1]
-systick_delay           0x000032c1   0x38  Code  Gb  MKL_SysTick.o [1]
-systick_delay_ms        0x000032f9   0x18  Code  Gb  MKL_SysTick.o [1]
-uart_init               0x00002715  0x2c0  Code  Gb  MKL_uart.o [1]
-uart_putchar            0x000029f9   0x34  Code  Gb  MKL_uart.o [1]
+sysinit                 0x00003e49   0x6a  Code  Gb  system_MKL.o [1]
+systick_delay           0x00003dcd   0x38  Code  Gb  MKL_SysTick.o [1]
+systick_delay_ms        0x00003e05   0x18  Code  Gb  MKL_SysTick.o [1]
+uart_init               0x00003281  0x2c0  Code  Gb  MKL_uart.o [1]
+uart_putchar            0x00003565   0x34  Code  Gb  MKL_uart.o [1]
 vector_str              0x1fffe410  0x1bc  Data  Gb  FIRE_MKL_conf.o [1]
-wdog_cfg                0x1ffff098    0x4  Data  Lc  MKL_wdog.o [1]
-wdog_disable            0x000035ed   0x16  Code  Gb  MKL_wdog.o [1]
-write_vtor              0x000025c5   0x20  Code  Gb  misc.o [1]
+wdog_cfg                0x1ffff0a4    0x4  Data  Lc  MKL_wdog.o [1]
+wdog_disable            0x00003fb5   0x16  Code  Gb  MKL_wdog.o [1]
+write_vtor              0x00003155   0x20  Code  Gb  misc.o [1]
 
 
 [1] = F:\Project_Compotition\6.MyFreescal_10th\New_for_platform\Freescale_K60-KL26_NRF\GPIO_NRF_KL26\Prj\IAR\Debug\Obj
@@ -524,9 +564,9 @@ write_vtor              0x000025c5   0x20  Code  Gb  misc.o [1]
 [5] = rt6M_tl.a
 [6] = shb_l.a
 
-  12 320 bytes of readonly  code memory
-   2 344 bytes of readonly  data memory
-   3 449 bytes of readwrite data memory
+  14 816 bytes of readonly  code memory
+   2 544 bytes of readonly  data memory
+   3 461 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

@@ -178,6 +178,7 @@ typedef struct
 //***************************************************
 
 //发送的数组可以无限大
+
 //data--要发送的数据 ；actualLen--需要发送数据的长度；sendlen，一次性发送的长度 (定值)：DATA_PACKET - 1 = 31
 extern void SendPack_Long(unsigned char *data,int actualLen, int sendlen); 
 extern void SendPack_Short(int father, int child, float value, int hasHead, int hasEnd); //一次发送只能小于32为的数组
