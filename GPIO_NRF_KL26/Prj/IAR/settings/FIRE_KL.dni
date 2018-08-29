@@ -1,5 +1,5 @@
 [DebugChecksum]
-Checksum=-178639268
+Checksum=1770245720
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -106,7 +106,7 @@ ProbeSetup0=2 1 1 2 0 0
 Enabled=0
 [DriverProfiling]
 Enabled=0
-Mode=1
+Mode=3
 Graph=0
 Symbiont=0
 Exclusions=

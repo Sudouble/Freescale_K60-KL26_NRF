@@ -19,7 +19,7 @@
           
           
           
-        <Column0>101</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <Column0>146</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Disassembly>
         <col-names>
@@ -73,14 +73,14 @@
       
       
       
-    <Pane/><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\App\Inc\include.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>1207</SelStart2><SelEnd2>1207</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\Inc\NRF_DIY.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>55</SelStart2><SelEnd2>55</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\Inc\FIRE_NRF24L0.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>512</SelStart2><SelEnd2>512</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Chip\Inc\common.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>198</YPos2><SelStart2>11052</SelStart2><SelEnd2>11052</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\Src\NRF_SmartCar.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>337</YPos2><SelStart2>9467</SelStart2><SelEnd2>9467</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\App\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>89</YPos2><SelStart2>1751</SelStart2><SelEnd2>1751</SelEnd2></Tab><ActiveTab>5</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\Inc\NRF_SmartCar.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>145</YPos2><SelStart2>4446</SelStart2><SelEnd2>4446</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\Src\FIRE_NRF24L0.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>51</YPos2><SelStart2>1327</SelStart2><SelEnd2>1327</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\Src\FIRE_NRF24L0_MSG.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>39</YPos2><SelStart2>441</SelStart2><SelEnd2>441</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-00e80840><key>iaridepm.enu1</key></Toolbar-00e80840></Sizes></Row0><Row1><Sizes><Toolbar-12d789b0><key>debuggergui.enu1</key></Toolbar-12d789b0></Sizes></Row1><Row2><Sizes><Toolbar-12d78370><key>armjlink.enu1</key></Toolbar-12d78370></Sizes></Row2></Top><Left><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>515</Bottom><Right>192</Right><x>-2</x><y>-2</y><xscreen>119</xscreen><yscreen>196</yscreen><sizeHorzCX>138695</sizeHorzCX><sizeHorzCY>244389</sizeHorzCY><sizeVertCX>226107</sizeVertCX><sizeVertCY>644638</sizeVertCY></Rect></Wnd3></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>194</Bottom><Right>860</Right><x>-2</x><y>-2</y><xscreen>862</xscreen><yscreen>196</yscreen><sizeHorzCX>1004662</sizeHorzCX><sizeHorzCY>244389</sizeHorzCY><sizeVertCX>138695</sizeVertCX><sizeVertCY>244389</sizeVertCY></Rect></Wnd2></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-028c07e0><key>iaridepm.enu1</key></Toolbar-028c07e0></Sizes></Row0><Row1><Sizes><Toolbar-0dd89798><key>debuggergui.enu1</key></Toolbar-0dd89798></Sizes></Row1><Row2><Sizes><Toolbar-0dd893b0><key>armjlink.enu1</key></Toolbar-0dd893b0></Sizes></Row2></Top><Left><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>515</Bottom><Right>237</Right><x>-2</x><y>-2</y><xscreen>146</xscreen><yscreen>196</yscreen><sizeHorzCX>138389</sizeHorzCX><sizeHorzCY>244389</sizeHorzCY><sizeVertCX>226540</sizeVertCX><sizeVertCY>644638</sizeVertCY></Rect></Wnd3></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>194</Bottom><Right>1057</Right><x>-2</x><y>-2</y><xscreen>1059</xscreen><yscreen>196</yscreen><sizeHorzCX>1003791</sizeHorzCX><sizeHorzCY>244389</sizeHorzCY><sizeVertCX>138389</sizeVertCX><sizeVertCY>244389</sizeVertCY></Rect></Wnd2></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Project>
 

@@ -79,27 +79,7 @@ void main()
     PIDSetting _pidsettings[PIDSETTING_NUM];
     DIYParameter _diyparameter[DIYPARAMETER_NUM];
     WholeSetting _wholesettings[GLOBAL_SETTING_NUM];
-    
-    for(i = 0; i < PIDSETTING_NUM; ++i)
-    {
-        _pidsettings[i].father = 0;
-        _pidsettings[i].child = 0;
-        _pidsettings[i].Value_P = 0;
-        _pidsettings[i].Value_I = 0;
-        _pidsettings[i].Value_D = 0;
-    }
-    for(i = 0; i < DIYPARAMETER_NUM; ++i)
-    {
-        _diyparameter[i].father = 0;
-        _diyparameter[i].child = 0;
-        _diyparameter[i].DIY_Value = 0;
-    }
-    for(i = 0; i < GLOBAL_SETTING_NUM; ++i)
-    {
-        _wholesettings[i].father = 0;
-        _wholesettings[i].child = 0;
-        _wholesettings[i].need_Send = 0;
-    }
+
     //NRF_Init End
    
 //    led_init(LED1);                         //初始化LED1
@@ -144,24 +124,24 @@ void main()
 //                _pidsettings[2].FlagValueChanged = 0;
 //                SendPack_Echo(SendBackPID_ACK, Balance_Stand_ACK, "ACK");
 //            }
-//            //========================================================
-//            //速度
-//            if(_pidsettings[3].FlagValueChanged == 1)
-//            {
-//                SPEED_CONTROL_P = _pidsettings[3].Value_P;
-//                SPEED_CONTROL_I = _pidsettings[3].Value_I;
-//                SPEED_CONTROL_D = _pidsettings[3].Value_D;
-//                
-////                //参数
-////                g_fSpeedControlOut = 0;
-////                g_fSpeedControlOutNew = 0;
-////                g_fSpeedControlOutOld = 0;
-////                fsampleerror1 = 0;
-//                _pidsettings[3].FlagValueChanged = 0;
-//                SendPack_Echo(SendBackPID_ACK, Balance_Speed_ACK, "ACK");
-//                
-//                printf("recvi!");
-//            }
+            //========================================================
+            //速度
+            if(_pidsettings[3].FlagValueChanged == 1)
+            {
+                SPEED_CONTROL_P = _pidsettings[3].Value_P;
+                SPEED_CONTROL_I = _pidsettings[3].Value_I;
+                SPEED_CONTROL_D = _pidsettings[3].Value_D;
+                
+//                //参数
+//                g_fSpeedControlOut = 0;
+//                g_fSpeedControlOutNew = 0;
+//                g_fSpeedControlOutOld = 0;
+//                fsampleerror1 = 0;
+                _pidsettings[3].FlagValueChanged = 0;
+                SendPack_Echo(SendBackPID_ACK, Balance_Speed_ACK, "ACK");
+                
+                printf("recvi!");
+            }
 //            //========================================================
 //            //方向
 //            if(_pidsettings[4].FlagValueChanged == 1)
@@ -184,9 +164,17 @@ void main()
 //            //自定义参数二
 //            if (_diyparameter[1].FlagValueChanged == 1)
 //            {
-//                //diyTest = _diyparameter[1].DIY_Value;
-//                //_diyparameter[1].FlagValueChanged = 0;
-//                //SendPack_Echo(SendBackDIY_ACK, DIY_Para_2_ACK, "ACK");
+//                diyTest = _diyparameter[1].DIY_Value;
+//                _diyparameter[1].FlagValueChanged = 0;
+//                SendPack_Echo(SendBackDIY_ACK, DIY_Para_2_ACK, "ACK");
+//            }
+             //=======================================================
+//            //自定义参数3
+//            if (_diyparameter[2].FlagValueChanged == 1)
+//            {
+//                //diyTest = _diyparameter[2].DIY_Value;
+//                //_diyparameter[2].FlagValueChanged = 0;
+//                //SendPack_Echo(SendBackDIY_ACK, DIY_Para_3_ACK, "ACK");
 //            }
 //            //=======================================================
 //            //========================================
@@ -194,7 +182,7 @@ void main()
             if(_wholesettings[0].need_Send == 1)
             {
                 
-                printf("I will send\n");
+                //printf("I will send\n");
                 //****************************************
                 //PID参数回发
                 //SendPack_PID(SendBackPID, Balance_Stand, ANGLE_CONTROL_P, 0, ANGLE_CONTROL_D, 1, 1); //直立PID
@@ -202,7 +190,7 @@ void main()
                 //SendPack_PID(SendBackPID, Balance_Direction, DIRECTION_CONTROL_P, 0, DIRECTION_CONTROL_D, 1, 1); //方向PID
                 //****************************************
                 //自定义参数
-                SendPack_Short(SendBackDIY,DIY_Para_1, 10, 1, 1);
+                //SendPack_Short(SendBackDIY,DIY_Para_1, ANGLE_CONTROL_P, 1, 1);
                 SendPack_Short(SendBackDIY,DIY_Para_2, 100, 1, 1);
                 SendPack_Short(SendBackDIY,DIY_Para_3, 10.2, 1, 1);
                
@@ -236,19 +224,21 @@ void main()
         //****************************************
         //CCD图像
         //SendPack_CCD(2, 1, (uint8_t *)&CCD_BUFF[0], TSL1401_SIZE, 1, 1);
+        //SendPack_CCD(2, 2, (uint8_t *)&CCD_BUFF[1], TSL1401_SIZE, 1, 1);
+        //SendPack_CCD(2, 3, (uint8_t *)&CCD_BUFF[2], TSL1401_SIZE, 1, 1);
         //****************************************
         //实时参数
-        //SendPack_Short(Electricity,Electricity_1, /*你的变量名*/ 0, 1, 0);
+        //SendPack_Short(Electricity,Electricity_1, /*你的变量名*/ 0, 1, 1);
         //****************************************
         //实时参数
-        SendPack_Short(RealTime,RealTime_1, (int)1, 1, 1);
-        SendPack_Short(RealTime,RealTime_2, (int)2, 1, 1);
-        SendPack_Short(RealTime,RealTime_3, (int)22, 1, 1);
-        SendPack_Short(RealTime,RealTime_4, (int)33, 1, 1);
-        SendPack_Short(RealTime,RealTime_5, (int)45, 1, 1);
-        SendPack_Short(RealTime,RealTime_6, (int)33, 1, 1);
-        //****************************************
-        //========================================
-        DELAY_MS(10);
+//        SendPack_Short(RealTime,RealTime_1, (int)1, 1, 1);  //第一路
+//        SendPack_Short(RealTime,RealTime_2, (int)2, 1, 1);  //第二路
+//        SendPack_Short(RealTime,RealTime_3, (int)22, 1, 1); //第三路
+//        SendPack_Short(RealTime,RealTime_4, (int)33, 1, 1);
+//        SendPack_Short(RealTime,RealTime_5, (int)45, 1, 1);
+//        SendPack_Short(RealTime,RealTime_6, (int)33, 1, 1);
+//        //****************************************
+//        //========================================
+//        DELAY_MS(10);
     }
 }

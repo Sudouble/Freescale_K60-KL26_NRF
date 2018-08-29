@@ -1,5 +1,5 @@
-#ifndef _NERDIY_H
-#define _NERDIY_H
+#ifndef _NERDIY_Serial_H
+#define _NERDIY_Serial_H
 
 #include  "VCAN_NRF24L0.h"
 #include  "common.h"
@@ -148,7 +148,7 @@ typedef enum
 //***************************************************
 
 //各种PID参数
-typedef struct PIDSetting_
+typedef struct
 {
   int FlagValueChanged;
   int father;
@@ -156,47 +156,24 @@ typedef struct PIDSetting_
   float Value_P;
   float Value_I;
   float Value_D;
-  PIDSetting_()
-  {
-    FlagValueChanged = 0;
-    father = 0;
-    child = 0;
-    Value_P = 0f;
-    Value_I = 0f;
-    Value_D = 0f;
-  }
 }PIDSetting; 
 
 //各种自定义参数
-typedef struct DIYParameter_
+typedef struct
 {
   int FlagValueChanged;
   int father;
   int child;
   float DIY_Value;
-  DIYParameter_()
-  {
-    FlagValueChanged = 0;
-    father = 0;
-    child = 0;
-    DIY_Value = 0f;
-  }
 }DIYParameter;
 
 //需要回发的所有参数
-typedef struct WholeSetting_
+typedef struct
 {
   int FlagValueChanged;
   int father;
   int child;
   int need_Send;
-  WholeSetting_()
-  {
-    FlagValueChanged = 0;
-    father = 0;
-    child = 0;
-    need_Send = 0;
-  }
 }WholeSetting;
 //***************************************************
 
@@ -209,7 +186,7 @@ extern void SendPack_Echo(int father, int child, char *sendACK);  //发送确认信号
 extern void SendPack_PID(int father, int child, float P, float I, float D, int hasHead, int hasEnd); //一次发送只能小于32为的数组
 extern void SendPack_CCD(int father, int child, uint8 *ccdbuff, int ccdwidth, int hasHead, int hasEnd);//一次发送只能小于32为的数组
 extern void SendPack_Camera(int father, int child, uint8 *camerabuff, int camera_size);
-extern int NRF_Recieve(unsigned char *data, PIDSetting *pidsetting, int num_PID, DIYParameter *diypara,int numDIY, WholeSetting *wholesetting, int numWhole);//OK
+extern int NRF_Recieve(unsigned char *data_tmp, PIDSetting *pidsetting, int num_PID, DIYParameter *diypara,int numDIY, WholeSetting *wholesetting, int numWhole);//OK
 float atof_self(const unsigned char *str, int start, int end);
 int atoi_self(const unsigned char *str, int start, int end);
 

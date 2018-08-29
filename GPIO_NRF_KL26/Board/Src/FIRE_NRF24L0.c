@@ -45,10 +45,10 @@ typedef enum
 
 // 用户配置 发送和 接收地址，频道
 
-uint8 TX_ADDRESS[5] = {0x00,0x00,0x00,0x00,0x01};   // 定义一个静态发送地址
-uint8 RX_ADDRESS[5] = {0x00,0x00,0x00,0x00,0x02};
+uint8 TX_ADDRESS[5] = {0xD1,0xD2,0xD3,0xD4,0xD5};   // 定义一个静态发送地址
+uint8 RX_ADDRESS[5] = {0xE1,0xF2,0xE4,0xE4,0xE6};
 
-#define CHANAL          5                              //频道选择
+#define CHANAL          0                              //频道选择
 
 
 // 内部配置参量

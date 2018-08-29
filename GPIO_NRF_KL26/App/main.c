@@ -71,27 +71,6 @@ void  main(void)
     PIDSetting _pidsettings[PIDSETTING_NUM];
     DIYParameter _diyparameter[DIYPARAMETER_NUM];
     WholeSetting _wholesettings[GLOBAL_SETTING_NUM];
-    
-    for(i = 0; i < PIDSETTING_NUM; ++i)
-    {
-        _pidsettings[i].father = 0;
-        _pidsettings[i].child = 0;
-        _pidsettings[i].Value_P = 0;
-        _pidsettings[i].Value_I = 0;
-        _pidsettings[i].Value_D = 0;
-    }
-    for(i = 0; i < DIYPARAMETER_NUM; ++i)
-    {
-        _diyparameter[i].father = 0;
-        _diyparameter[i].child = 0;
-        _diyparameter[i].DIY_Value = 0;
-    }
-    for(i = 0; i < GLOBAL_SETTING_NUM; ++i)
-    {
-        _wholesettings[i].father = 0;
-        _wholesettings[i].child = 0;
-        _wholesettings[i].need_Send = 0;
-    }
     //NRF_Init End
     
    

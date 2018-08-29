@@ -1,7 +1,7 @@
 #ifndef _NERDIY_H
 #define _NERDIY_H
 
-#include  "FIRE_NRF24L0.h"
+#include  "VCAN_NRF24L0.h"
 #include  "common.h"
 #include  "stdio.h"
 #include  "stdlib.h"
@@ -148,7 +148,7 @@ typedef enum
 //***************************************************
 
 //各种PID参数
-typedef struct
+typedef struct PIDSetting_
 {
   int FlagValueChanged;
   int father;
@@ -156,28 +156,52 @@ typedef struct
   float Value_P;
   float Value_I;
   float Value_D;
+  PIDSetting_()
+  {
+    FlagValueChanged = 0;
+    father = 0;
+    child = 0;
+    Value_P = 0f;
+    Value_I = 0f;
+    Value_D = 0f;
+  }
 }PIDSetting; 
 
 //各种自定义参数
-typedef struct
+typedef struct DIYParameter_
 {
   int FlagValueChanged;
   int father;
   int child;
   float DIY_Value;
+  DIYParameter_()
+  {
+    FlagValueChanged = 0;
+    father = 0;
+    child = 0;
+    DIY_Value = 0f;
+  }
 }DIYParameter;
 
 //需要回发的所有参数
-typedef struct
+typedef struct WholeSetting_
 {
   int FlagValueChanged;
   int father;
   int child;
   int need_Send;
+  WholeSetting_()
+  {
+    FlagValueChanged = 0;
+    father = 0;
+    child = 0;
+    need_Send = 0;
+  }
 }WholeSetting;
 //***************************************************
 
 //发送的数组可以无限大
+
 //data--要发送的数据 ；actualLen--需要发送数据的长度；sendlen，一次性发送的长度 (定值)：DATA_PACKET - 1 = 31
 extern void SendPack_Long(unsigned char *data,int actualLen, int sendlen); 
 extern void SendPack_Short(int father, int child, float value, int hasHead, int hasEnd); //一次发送只能小于32为的数组

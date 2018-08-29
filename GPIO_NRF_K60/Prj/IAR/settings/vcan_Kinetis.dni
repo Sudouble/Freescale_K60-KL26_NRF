@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=2118443929
+Checksum=-1757905011
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -43,7 +43,8 @@ Exclusions=
 [Disassemble mode]
 mode=0
 [Breakpoints2]
-Count=0
+Bp0=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\App\main.c}.113.14" 0 0 1 "" 0 "" 0
+Count=1
 [Aliases]
 A0=_ "F:\Project_Compotition\6.MyFreescal_10th\Code\GPIO_NRF_Source\Chip\src\MK60_mcg.c" ""
 Count=1

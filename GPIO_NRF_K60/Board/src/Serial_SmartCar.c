@@ -58,7 +58,7 @@ void SendPack_Short(int father, int child, float value, int hasHead, int hasEnd)
     int count_i = 0;
     
     sprintf(value_string, "%4d|", (int)(1000*value));
-    buffer[count_i++]='0';
+    //buffer[count_i++]='0';
     
     if(hasHead) //设置是否需要加数据头
       buffer[count_i++]='#';
@@ -90,7 +90,7 @@ void SendPack_Short(int father, int child, float value, int hasHead, int hasEnd)
     strcat(buffer, value_string);
     if(hasEnd)  //添加结束符
       strcat(buffer, "$");
-    buffer[0]=strlen(buffer)-1;
+    //buffer[0]=strlen(buffer)-1;
     
     //printf("%d---%s", (int)buffer[0], buffer);
     if(buffer[0] < 31)
@@ -112,7 +112,7 @@ void SendPack_Echo(int father, int child, char *sendACK)
     char buffer[DATA_PACKET];
     int count_i = 0;
     
-    buffer[count_i++]='0';
+    //buffer[count_i++]='0';
     
     buffer[count_i++]='#';
     
@@ -142,7 +142,7 @@ void SendPack_Echo(int father, int child, char *sendACK)
     buffer[count_i++]='\0';
     strcat(buffer, sendACK);
       strcat(buffer, "|$");
-    buffer[0]=strlen(buffer)-1;
+    //buffer[0]=strlen(buffer)-1;
     
     //printf("%d---%s", (int)buffer[0], buffer);
     if(buffer[0] < 31)
@@ -165,7 +165,7 @@ void SendPack_PID(int father, int child, float P, float I, float D, int hasHead,
     int count_i = 0;
     
     //============================================
-    buffer[count_i++]='0';
+    //buffer[count_i++]='0';
     
     if(hasHead) //设置是否需要加数据头
       buffer[count_i++]='#';
@@ -208,7 +208,7 @@ void SendPack_PID(int father, int child, float P, float I, float D, int hasHead,
     if(hasEnd)  //添加结束符
       strcat(buffer, "$");
     
-    buffer[0]=strlen(buffer)-1;
+    //buffer[0]=strlen(buffer)-1;
     
     //printf("%d---%s", (int)buffer[0], buffer);
     if(buffer[0] < 31)
@@ -231,7 +231,7 @@ void SendPack_CCD(int father, int child, uint8 *ccdbuff, int ccdwidth, int hasHe
     int count_i = 0;
     
     //============================================
-    buffer[count_i++]='0';
+    //buffer[count_i++]='0';
     
     if(hasHead) //设置是否需要加数据头
       buffer[count_i++]='#';
@@ -278,7 +278,7 @@ void SendPack_CCD(int father, int child, uint8 *ccdbuff, int ccdwidth, int hasHe
     else{}
     buffer[count_i++]=')';
     buffer[count_i++]='\0';
-    buffer[0]=strlen(buffer) - 1;
+    //buffer[0]=strlen(buffer) - 1;
     
     //NRF send buffer
     if(buffer[0] < 31)
@@ -335,7 +335,7 @@ void SendPack_Camera(int father, int child, uint8 *camerabuff, int camera_size)
     int count_i = 0;
     
     //============================================
-    buffer[count_i++]='0';
+    //buffer[count_i++]='0';
     
     buffer[count_i++]='#';
     
@@ -374,7 +374,7 @@ void SendPack_Camera(int father, int child, uint8 *camerabuff, int camera_size)
     buff_end[count_i++]='|';
     buff_end[count_i++]='$';
     buff_end[count_i++]='\0';
-    buff_end[0]=strlen(buff_end) - 1;
+    //buff_end[0]=strlen(buff_end) - 1;
     
     if(nrf_tx((uint8*)buff_end, DATA_PACKET)==1)
     {
@@ -382,12 +382,15 @@ void SendPack_Camera(int father, int child, uint8 *camerabuff, int camera_size)
     }
 }
 
-int NRF_Recieve(unsigned char *data, PIDSetting *pidsetting, int num_PID, DIYParameter *diypara,int numDIY, WholeSetting *wholesetting, int numWhole)//OK
+int NRF_Recieve(unsigned char *data_tmp, PIDSetting *pidsetting, int num_PID, DIYParameter *diypara,int numDIY, WholeSetting *wholesetting, int numWhole)//OK
 {
     char i = 0, j = 0, maxJcount = 0;
     int Rxlen;
     int actual = 0;
     int Pos[50] = {0};
+    
+    int data[32] = {0};
+    
     
     //获取传参进来的结构体大小
     int size_pidsetting = num_PID;
@@ -397,11 +400,20 @@ int NRF_Recieve(unsigned char *data, PIDSetting *pidsetting, int num_PID, DIYPar
     //解析后存放的值
     int father, child;
     float value_P, value_I, value_D, value;
-    
+            
     //以下进行数据的解析
     if (NULL != data)
     {
         Rxlen = strlen((char*)data);
+        if(Rxlen > 32)
+            return -1;
+        
+        data[0] = 0;
+        for (i = 0; i < Rxlen; i++)
+        {
+            data[i+1] = data_tmp[i];
+        }
+        
         if (data[1] == '#'&& data[Rxlen - 1] == '$')
         {
             //以下为判断回路的值是否大于10；大于需要另外解析
